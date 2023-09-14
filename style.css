@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'gellix';
+    src: url('/fonts/Gellix-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'gellix';
+    src: url('/fonts/Gellix-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'gellix';
+    src: url('/fonts/Gellix-Medium.ttf') format('truetype');
+  }
+
+
+  
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'gellix', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    margin: 16px 40px 100px 40px;
+    letter-spacing: 0.25;
+    font-size: 16px;
+}
+
+.top-header {
+    display: flex;
+    border-bottom: 1px solid rgba(1, 61, 11, 0.11);
+    padding-bottom: 7px;
+    color: rgba(1, 61, 11, 0.651);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 11px 66px;
+}
+
+.menu li:hover {
+    color: #22ad01;
+}
+
+.menu li {
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.logo {
+    margin: 12px 0px;
+}
+
+.menu-button {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    flex: 1;
+    align-items: flex-end;
+    height: 100%;
+    align-content: flex-start;
+}
+
+.menu-button button, 
+.card  button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s;
+}
+
+.menu-button .light-button {
+    background-color: white;
+    color: rgba(1, 61, 11, 0.945);
+
+}
+
+.menu-button .light-button:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+.menu-button .dark-button,
+.card  button{
+    background-color: #22ad01;
+    color: white;
+}
+
+.menu-button .dark-button:hover,
+.card  button:hover {
+    background-color: #29cf00;
+}
+
+.bottom-header {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 11px 0px;
+    color: rgba(1, 61, 11, 0.438);
+}
+
+.bottom-header li:hover {
+    color: rgba(1, 61, 11, 0.651);
+    cursor: pointer;
+}
+
+
+/*hero section*/
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #003c2f;
+}
+
+.subscriptions {
+    display: flex;
+    /* gap: 50px; */
+    padding: 5px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.monthly {
+    background-color: #003c2f;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+
+}
+
+.yearly {
+    /* background-color: #003c2f; */
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.yearly p + p {
+    background-color: white;
+    color: #22ad01;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 10px;
+}
+
+.plans {
+    display: flex;
+    gap: 15px;
+    /* margin: 90px 40px; */
+    margin: 100px 40px;
+
+    max-width: 1060px;
+}
+
+
+.plans li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.card-layer {
+    padding: 33px 0px 5px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-layer.color {
+    padding: 5px 6px 5px;
+    background-color: #ee8146;
+
+}
+
+.card-layer.color .card {
+    box-shadow: none;
+}
+
+.card-layer > p {
+    color: white;
+    padding-bottom: 12px;
+    font-size: 14px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow:0 0 20px 0 rgba(0,0,0,.1);
+    border-radius: 20px;
+    padding: 57px 40px 40px 40px;
+    background-color: white;
+}
+
+.top-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 60, 47, 0.2);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+}
+
+.top-card h1 {
+    margin: 9px 0;
+}
+
+.top-card div > span {
+    font-weight: bolder;
+    font-size: 20px; 
+}
+
+.top-card div > span + span {
+    font-size: 32px;
+    margin: 0 0px 0 5px;
+}
+
+.top-card div > span + span + span {
+    font-size: 16px;
+    opacity: 0.3;
+}
+
+.card p {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.card button{
+    padding: 15px 50px;
+    margin: 20px;
+}
+
+.card svg {
+    height: 15px;
+    fill:#22ad01;
+}
