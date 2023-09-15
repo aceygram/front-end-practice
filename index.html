@@ -44,13 +44,13 @@
     <div class="hero-section">
         <h1>Pick the best plan for your business</h1>
         <div class="subscriptions">
-            <div class="monthly">Monthly</div>
-            <div class="yearly">
+            <div class="monthly tablinks active" data-tab ="tab1">Monthly</div>
+            <div class="yearly tablinks" data-tab ="tab2" >
                 <p>Yearly</p>
                 <p>2 months for free</p>
             </div>
         </div>
-        <div class="plans monthly-plan">
+        <div class="plans monthly-plan" id="tab1">
             <div class="card-layer">
                 <div class="starter card">
                     <div class="top-card">
@@ -82,7 +82,7 @@
                 <p>Most Popular</p>
                 <div class="professional card">
                     <div class="top-card">
-                        <h1>professional</h1>
+                        <h1>Professional</h1>
                         <div>
                             <span>$</span>
                             <span>39</span>
@@ -109,7 +109,7 @@
             <div class="card-layer">
                 <div class="business card">
                     <div class="top-card">
-                        <h1>business</h1>
+                        <h1>Business</h1>
                         <div>
                             <span>$</span>
                             <span>79</span>
@@ -134,18 +134,22 @@
                 </div>
             </div>
         </div>
-        <div class="plans monthly-plan">
+
+
+
+        <div class="plans yearly-plan" id="tab2">
             <div class="card-layer">
                 <div class="starter card">
                     <div class="top-card">
                         <h1>Starter</h1>
                         <div>
                             <span>$</span>
-                            <span>24</span>
+                            <span>17</span>
                             <span>/month</span>
                         </div>
                         <button>Start for free</button>
                         <p>Ideal for freelancers and contractors just starting out.</p>
+                        <p>Billed Annually.</p>
                     </div>
                     <ul>
                         <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-bold</title><path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" /></svg>All Templates</li>
@@ -166,14 +170,15 @@
                 <p>Most Popular</p>
                 <div class="professional card">
                     <div class="top-card">
-                        <h1>professional</h1>
+                        <h1>Professional</h1>
                         <div>
                             <span>$</span>
-                            <span>39</span>
+                            <span>32</span>
                             <span>/month</span>
                         </div>
                         <button>Start for free</button>
                         <p>Ideal for freelancers and contractors just starting out.</p>
+                        <p>Billed Annually.</p>
                     </div>
                     <ul>
                         <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-bold</title><path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" /></svg>All Templates</li>
@@ -193,14 +198,15 @@
             <div class="card-layer">
                 <div class="business card">
                     <div class="top-card">
-                        <h1>business</h1>
+                        <h1>Business</h1>
                         <div>
                             <span>$</span>
-                            <span>79</span>
+                            <span>52</span>
                             <span>/month</span>
                         </div>
                         <button>Start for free</button>
                         <p>Ideal for freelancers and contractors just starting out.</p>
+                        <p>Billed Annually.</p>
                     </div>
                     <ul>
                         <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-bold</title><path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z" /></svg>All Templates</li>
@@ -219,6 +225,8 @@
             </div>
         </div>
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
 
