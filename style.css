@@ -126,14 +126,18 @@ header {
     background-color: rgb(241, 241, 241);
     border-radius: 50px;
     font-size: 14px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #003c2f;
+    color: white;
+    border-radius: 5px;
 }
 
 .monthly {
-    background-color: #003c2f;
-    color: white;
     padding: 15px 30px;
     border-radius: 50px;
-
 }
 
 .yearly {
@@ -153,11 +157,10 @@ header {
 }
 
 .plans {
-    display: flex;
+    display:flex;
     gap: 15px;
     /* margin: 90px 40px; */
-    margin: 100px 40px;
-
+    margin: 50px 40px;
     max-width: 1060px;
 }
 
