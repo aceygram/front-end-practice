@@ -1,22 +1,27 @@
-var tabLinks = document.querySelectorAll('.tablinks');
-tabLinks.forEach(function(tabLink) {
-    tabLink.addEventListener('click', function() {
-        var tabName = this.getAttribute('data-tab');
+document.getElementById('toggle').addEventListener('change', () => {
+  // Your code here for toggle change event
+  const monthly = document.querySelector('.monthly');
+  monthly.classList.toggle('green');
+  const monthlyPlans = document.querySelector('.monthly-plans');
+  monthlyPlans.classList.toggle('show');
 
-        var tabContent = document.querySelectorAll('.plans');
-        tabContent.forEach(function(tab) {
-            tab.style.display = 'none';
-        });
+  const yearly = document.querySelector('.yearly');
+  yearly.classList.toggle('white');
+  const yearlyPlans = document.querySelector('.yearly-plans');
+  yearlyPlans.classList.toggle('show');
+});
 
-        tabLinks.forEach(function(tabLink) {
-            tabLink.classList.remove('active');
-        });
 
-        document.getElementById(tabName).style.display = 'flex';
-        this.classList.add('active');
-    })
-})
+const accordionHeaders = document.querySelectorAll('.accordion-header');
 
+accordionHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    const accordionItem = header.parentElement;
+    accordionItem.classList.toggle('active');
+    const accordionContent = accordionItem.querySelector('.accordion-content');
+    accordionContent.style.display = accordionContent.style.display === 'none' ? 'block' : 'none';
+  });
+});
 
 // =
 // N
