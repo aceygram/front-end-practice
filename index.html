@@ -43,14 +43,17 @@
 
     <div class="hero-section">
         <h1>Pick the best plan for your business</h1>
-        <div class="subscriptions">
-            <div class="monthly tablinks active" data-tab ="tab1">Monthly</div>
-            <div class="yearly tablinks" data-tab ="tab2" >
+        <label class="switch">
+            <input type="checkbox" id="toggle" />
+            <span class="slider">
+              <div class="monthly" data-tab="tab1">Monthly</div>
+              <div class="yearly" data-tab="tab2">
                 <p>Yearly</p>
                 <p>2 months for free</p>
-            </div>
-        </div>
-        <div class="plans monthly-plan" id="tab1">
+              </div>
+            </span>
+        </label>
+        <div class="plans monthly-plans show">
             <div class="card-layer">
                 <div class="starter card">
                     <div class="top-card">
@@ -137,7 +140,7 @@
 
 
 
-        <div class="plans yearly-plan" id="tab2">
+        <div class="plans yearly-plans">
             <div class="card-layer">
                 <div class="starter card">
                     <div class="top-card">
@@ -225,6 +228,77 @@
             </div>
         </div>
     </div>
+
+    <div class="add-on-section">
+        <h1>Take it to the</h1>
+        <h1>next level with add-ons</h1>
+
+        <div class="add-on-card-layer">
+            <div class="add-on-card">
+                <div class="card-header">
+                    <h1>Collaborators</h1>
+                    <p>Invite other users to specific projects for limited access and functionality.</p>
+                </div>
+                <div class="card-footer">
+                    <span>Free</span>
+                </div>
+            </div>
+            <div class="add-on-card">
+                <div class="card-header">
+                    <h1>Partners</h1>
+                    <p>Invite other users for full account access and company management.</p>
+                </div>
+                <div class="card-footer">
+                    <span>$9</span><p>/month</p>
+                </div>
+            </div>
+            <div class="add-on-card">
+                <div class="card-header">
+                    <h1>Tax Assistant</h1>
+                    <p>Track expenses, identify write-offs, and estimate quarterly taxes easily.</p>
+                    <div class="link">Learn More</div>
+                </div>
+                <div class="card-footer">
+                    <span>$10</span><p>/month</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="faq-section">
+        <img src="/images/accordio-img.png" loading="lazy" width="794.5" sizes="(max-width: 991px) 100vw, 794.4921875px" alt="">
+        <h1>Frequently asked questions</h1>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">How does the free trial work?</div>
+                <div class="accordion-content">
+                  <p>When you start your trial with Bonsai you'll receive full, unlimited access to the plan you chose. You will need to enter your credit card information to begin your trial, but don't worry - we won't charge you anything until the trial ends. You can cancel at any time during the trial period via your Subscriptions settings.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">Can I change my plan anytime?</div>
+                <div class="accordion-content">
+                  <p>Yes, you can upgrade, downgrade or cancel your plan at any time via your Subscription settings.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">Is my Bonsai subscription tax deductible?</div>
+                <div class="accordion-content">
+                  <p>Yes, the IRS allows for tax deduction for software you use to run your business. Bonsai's expense tracking even automatically categorizes your subscription as a deductible software expense.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">What is your refund policy?</div>
+                <div class="accordion-content">
+                  <p>If you contact us within two weeks of being charged for your subscription, we will be happy to issue a refund for you. Beyond those two weeks, you will need to cancel or modify the subscription from the Subscriptions tab in Settings to avoid future charges, but refunds will not be issued. This applies to both monthly and annual plans.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
 
     <script src="main.js"></script>
 </body>
