@@ -338,19 +338,21 @@ header {
   padding-bottom: 30px;
 }
 
-.add-on-section h1 {
+.add-on-section h1,
+.testimony-section h1 {
   color: #003c2f;
   margin: 0;
   font-size: 40px;
   font-weight: bolder;
 }
 
-.add-on-section h1 + h1 {
+.add-on-section h1 + h1,
+.testimony-section h1 + h1{
   margin: 0px 0px 30px 0px;
 }
 
 .add-on-card-layer {
-  max-width: 1060px;
+  max-width: 1144px;
   display: flex;
   gap: 35px;
   margin-top: 35px;
@@ -428,12 +430,12 @@ header {
   z-index: 1;
   display: block;
   width: 100%;
-  max-width: 1144px;
   padding-top: 100px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 40px;
-  padding-left: 40px;
+  /* padding-right: 40px; */
+  padding-left: 145px;
+  padding-right: 145px;
   overflow: hidden;
   padding-bottom: 100px;
 }
@@ -442,25 +444,110 @@ header {
   position: absolute;
   /* max-width: 100%; */
   top: 0;
-  right: -500px;
+  right: -395px;
 }
 
 .faq-section h1 {
-  font-size: 40px;
+  font-size: 42px;
   color: #003c2f;
+  padding-top: 10px;
+}
+
+.accordion {
+  margin-top: 50px;
+  color: #003c2f;
+  max-width: 640px;
 }
 
 .accordion-item {
   border-bottom: 1px solid #ccc;
+  padding: 30px 0;
 }
 
 .accordion-header {
-  background-color: #f4f4f4;
-  padding: 10px;
+  padding: 15px 0 10px 0;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes rotateArrow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.arrow {
+  height: 30px;
+  fill: #22ad01;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    height: auto;
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleY(0);
+  }
 }
 
 .accordion-content {
-  padding: 10px;
-  display: none;
+  padding: 0;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0.7;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.active .accordion-content {
+  display: block;
+  animation-name: slideDown;
+}
+
+:not(.active) .accordion-content {
+  animation-name: slideUp;
+}
+
+.testimony-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .faq-section {
+    overflow: hidden;
+    max-width: 1144px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .faq-section img {
+    position: absolute;
+    right: -500px;
+    z-index: 1;
+  }
 }
