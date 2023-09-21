@@ -13,16 +13,22 @@ document.getElementById('toggle').addEventListener('change', () => {
 
 
 const accordionHeaders = document.querySelectorAll('.accordion-header');
-
 accordionHeaders.forEach(header => {
   header.addEventListener('click', () => {
     const accordionItem = header.parentElement;
     accordionItem.classList.toggle('active');
     const accordionContent = accordionItem.querySelector('.accordion-content');
-    accordionContent.style.display = accordionContent.style.display === 'none' ? 'block' : 'none';
+    const arrow = accordionItem.querySelector('.arrow'); // Get the arrow within the clicked item
+
+    if (accordionItem.classList.contains('active')) {
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+      arrow.style.transform = 'rotate(180deg)';
+    } else {
+      accordionContent.style.maxHeight = '0';
+      arrow.style.transform = 'rotate(0deg)';
+    }
   });
 });
-
 // =
 // N
 // n
