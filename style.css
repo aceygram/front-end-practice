@@ -23,6 +23,10 @@
     box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
     margin: 16px 40px 100px 40px;
     letter-spacing: 0.25;
@@ -34,6 +38,7 @@ header {
     border-bottom: 1px solid rgba(1, 61, 11, 0.11);
     padding-bottom: 7px;
     color: rgba(1, 61, 11, 0.651);
+    position: relative;
 }
 
 .menu {
@@ -64,6 +69,10 @@ header {
     align-items: flex-end;
     height: 100%;
     align-content: flex-start;
+}
+
+.hamburger {
+  display: none; 
 }
 
 .menu-button button, 
@@ -188,7 +197,7 @@ header {
     color: white;
     z-index: 1;
     overflow: hidden;
-    z-index: 1000;
+    z-index: 99;
     display: flex;
     justify-content: center;
   }
@@ -197,7 +206,7 @@ header {
     /* background-color: #003c2f; */
     position: relative;
     color: #003c2f;
-    z-index: 1000;
+    z-index: 99;
     overflow: hidden;
   
     padding: 15px 20px;
@@ -235,14 +244,6 @@ header {
     max-width: 1060px;
 }
   
-  .show {
-    display: flex;
-  }
-  
-
-
-
-
 .plans li {
     list-style: none;
     display: flex;
@@ -558,13 +559,13 @@ header {
   border-left: 1px solid #ccc;
 }
 
-.testimonies {
+.testimonies div {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   min-width: 1500px;
   gap: 20px 15px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .testimonies p {
@@ -741,6 +742,10 @@ header {
   gap: 15px;
 }
 
+.show-flex {
+  display: flex;
+}
+
 @media only screen and (max-width: 1200px) {
   .faq-section {
     overflow: hidden;
@@ -757,5 +762,366 @@ header {
 }
 
 @media only screen and (max-width: 991px) {
+  header {
+    margin: 16px 40px 35px 40px;
+    letter-spacing: 0.25;
+    font-size: 16px;
+  }
 
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    left: 0;
+    top: 73px;
+    right: 0;
+    margin: 4px 0 0 0;
+
+  }
+  
+  .menu li {
+    border-bottom: 1px solid #ccc;
+    opacity: 1;
+    padding: 31px 0;
+    font-weight: bold;
+  }
+
+  .menu li:nth-child(2) {
+    display: none;
+  }
+
+  .menu-button{
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top: 380px;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    padding-bottom: 160px;
+  }
+
+  .menu-button button {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 12px 50px 14px;
+    border: none;
+  }
+
+  .menu-button button:nth-child(1) {
+    border: 2px solid #003c2f;
+  }
+
+
+  .menu-together {
+   z-index: 1000;
+  }
+
+  .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+    padding-bottom: 7px;
+    color: #003c2f;
+  }
+
+  .bottom-header {
+    display: none;
+  }
+
+
+  .hamurger-layer{
+    background-color: #003c2f;
+    border-radius: 70px;
+    padding: 6px;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .hamburger{
+    display: block;
+    width: 30px;
+    fill: white;
+  }
+
+  .card {
+    max-width: 100%;
+    padding: 30px 20px 20px 20px;
+    background-color: white;
 }
+
+  .card-layer:nth-child(3) {
+    padding: 5px 0px 5px;
+  }
+
+  .card-layer {
+    width: 560px;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .plans {
+    margin: 0px 40px;
+  }
+
+  .top-card {
+    width: 97%;
+  }
+
+  .add-on-section h1 + h1, .testimony-section h1 + h1 {
+    margin: 0px 0px 5px 0px;
+  }
+
+  .add-on-card-layer {
+    overflow-x: scroll;
+    max-width: 100%;
+  }
+
+  .add-on-card {
+    min-height: 291px;
+    min-width: 250px;
+    padding: 45px 30px 30px 30px;
+  }
+
+  .add-on-card h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .card-footer span {
+    font-size: 26px;
+  }
+
+  .testimonies {
+    width: 100%;
+    overflow-x: scroll;
+    padding-left: 10px;
+  }
+  
+  .testimonies div {
+    justify-content: start;
+    min-width: 1390px;
+  }
+
+  .call-to-action-section {
+    display: block;
+    margin: 60px 0 120px 0;
+  }
+
+  .call-to-action-section .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .call-to-action-section .top .left .leaf {
+    left: 350px;
+    top: -60px;
+  }
+
+  .call-to-action-img {
+    width: 410px;
+    margin-bottom: 20px;
+  }
+
+  .cta-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .footer-section .top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .show-block {
+    display: block;
+  }
+
+  .show-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cta-banner .header {
+    margin-bottom: 10px;
+  }
+
+  .footer-section .bottom-top {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 30px 0;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px){
+  header {
+    margin: 16px 20px 35px 20px;
+    letter-spacing: 0.25;
+    font-size: 16px;
+  }
+
+  .top-card h1 {
+    margin: 9px 0;
+    font-size: 25px;
+  }  
+
+  .add-on-section > h1, .testimony-section h1, .faq-section h1 {
+    font-size: 30px;
+  }
+
+  .sponsors img {
+    height: 50px;
+    padding: 0 20px;
+  }
+  
+  .call-to-action-section {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    margin: 60px 0 120px 0;
+    color: #003c2f;
+    }
+
+    .call-to-action-img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .call-to-action-section .top .left .leaf {
+    width: 30%;
+    left: 428px;
+    top: -20px;
+  }
+
+
+  .call-to-action-section .top .right {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .call-to-action-section h1 {
+    margin: 0;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 1px;
+  }
+
+  .cta-banner {
+    padding: 70px 100px;
+    margin: 100px 20px 0px;
+  }
+
+  .call-to-action-section button {
+    padding: 15px 50px;
+    margin: 20px 0;
+  }
+
+  .add-on-card-layer {
+    padding: 0px 20px;
+  }
+
+  .footer-section {
+    padding: 0 20px 0px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .card-layer {
+    max-width: 380px;
+  }
+
+  .hero-section h1 {
+    padding: 0px 20px;
+    text-align: center;
+  }
+  
+  .faq-section {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+  }
+
+  .faq-section img {
+    display: none;
+  }
+
+  .sponsors img {
+    height: 30px;
+    padding: 0 20px;
+}
+
+  .sponsors {
+    margin: 10px 0px 40px 0px;
+  }
+
+  .call-to-action-section .top .left .leaf {
+    left: 335px;
+    top: -25px;
+  }
+
+  .call-to-action-section .top .left {
+    padding-left: 73px;
+    padding-right: 65px;
+    position: relative;
+  }
+
+  .cta-banner {
+    padding: 45px 40px;
+    margin: 40px 20px 0px;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .card-layer {
+    max-width: 320px;
+  }
+
+  .call-to-action-section .top .left .leaf {
+    left: 245px;
+    top: -20px;
+  }
+
+  .call-to-action-section .top .left {
+    padding-left: 40px;
+    padding-right: 30px;
+    position: relative;
+  }
+  
+  
+  /* .card-layer {
+    max-width: 380px;
+  }
+
+  .hero-section h1 {
+    padding: 0px 20px;
+    text-align: center;
+  }
+  
+  .faq-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .faq-section img {
+    display: none;
+  }
+
+  .sponsors img {
+    height: 30px;
+    padding: 0 20px;
+}
+
+.sponsors {
+  margin: 10px 0px 40px 0px;
+} */
+}
+
