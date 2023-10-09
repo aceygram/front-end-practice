@@ -1,14 +1,23 @@
+const hamurger = document.querySelector('.hamurger-layer');
+hamurger.addEventListener('click', () => {
+  const menu = document.querySelectorAll('.menu-together');
+  menu.forEach((m) => {
+    m.classList.toggle('show-block');
+  })
+});
+
+
 document.getElementById('toggle').addEventListener('change', () => {
   // Your code here for toggle change event
   const monthly = document.querySelector('.monthly');
   monthly.classList.toggle('green');
   const monthlyPlans = document.querySelector('.monthly-plans');
-  monthlyPlans.classList.toggle('show');
+  monthlyPlans.classList.toggle('show-flex');
 
   const yearly = document.querySelector('.yearly');
   yearly.classList.toggle('white');
   const yearlyPlans = document.querySelector('.yearly-plans');
-  yearlyPlans.classList.toggle('show');
+  yearlyPlans.classList.toggle('show-flex');
 });
 
 
