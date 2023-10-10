@@ -11,12 +11,6 @@
     font-weight: bold; /* or bold */
     font-style: normal; /* or italic */
   }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'gellix';
-    font-weight: bold;
-    font-style: normal;
-  }
   
 * {
     margin: 0;
