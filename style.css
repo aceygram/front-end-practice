@@ -19,18 +19,12 @@
     font-weight: bold;
     font-style: normal;
   }
-
-  h1, h2, h3, h4 {
-    font-family: 'Gellix';
-    font-weight: bold;
-    font-style: normal;
-  }
   
 * {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: 'gellix';
+    font-family: 'Gabarito', sans-serif;
     box-sizing: border-box;
 }
 
@@ -89,7 +83,7 @@ header {
 .menu-button button, 
 .card  button,
 .call-to-action-section button {
-    padding: 10px 20px;
+    padding: 10px 20px 15px;
     border-radius: 50px;
     cursor: pointer;
     border: none;
@@ -335,7 +329,7 @@ header {
 
 .card button,
 .call-to-action-section button {
-    padding: 15px 50px;
+    padding: 15px 50px 20px;
     margin: 20px 0;
 }
 
