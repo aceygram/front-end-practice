@@ -19,6 +19,10 @@
     font-weight: bold;
     font-style: normal;
   }
+
+  h1, h2, h3, h4 {
+    letter-spacing: 50%;
+  }
   
 * {
     margin: 0;
