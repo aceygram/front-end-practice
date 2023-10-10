@@ -1,19 +1,16 @@
 @font-face {
     font-family: 'gellix';
     src: url('fonts/Gellix-Regular.ttf') format('truetype');
+    font-weight: normal; /* or bold */
+    font-style: normal; /* or italic */
   }
 
   @font-face {
     font-family: 'gellix';
     src: url('fonts/Gellix-Bold.ttf') format('truetype');
+    font-weight: bold; /* or bold */
+    font-style: normal; /* or italic */
   }
-
-  @font-face {
-    font-family: 'gellix';
-    src: url('fonts/Gellix-Medium.ttf') format('truetype');
-  }
-
-
   
 * {
     margin: 0;
