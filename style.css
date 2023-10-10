@@ -1,15 +1,23 @@
 @font-face {
     font-family: 'gellix';
-    src: url('fonts/Gellix-Regular.ttf') format('truetype');
-    font-weight: normal; /* or bold */
-    font-style: normal; /* or italic */
+    src: url('fonts/Gellix-Regular.eot');
+    src: url('fonts/Gellix-Regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Gellix-Regular.woff2') format('woff2'),
+       url('fonts/Gellix-Regular.woff') format('woff'),
+       url('fonts/Gellix-Medium.ttf') format('truetype'),;
+    font-weight: normal;
+    font-style: normal;
   }
 
   @font-face {
     font-family: 'gellix';
-    src: url('fonts/Gellix-Black.ttf') format('truetype');
-    font-weight: bold; /* or bold */
-    font-style: normal; /* or italic */
+    src: url('fonts/Gellix-Black.eot');
+    src: url('fonts/Gellix-Black.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Gellix-Black.woff2') format('woff2'),
+       url('fonts/Gellix-Black.woff') format('woff'),
+       url('fonts/Gellix-Black.ttf') format('truetype'),;
+    font-weight: bold;
+    font-style: normal;
   }
   
 * {
