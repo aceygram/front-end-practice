@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'gellix';
-    src: url('/fonts/Gellix-Regular.ttf') format('truetype');
+    src: url('fonts/Gellix-Regular.ttf') format('truetype');
   }
 
   @font-face {
     font-family: 'gellix';
-    src: url('/fonts/Gellix-Bold.ttf') format('truetype');
+    src: url('fonts/Gellix-Bold.ttf') format('truetype');
   }
 
   @font-face {
     font-family: 'gellix';
-    src: url('/fonts/Gellix-Medium.ttf') format('truetype');
+    src: url('fonts/Gellix-Medium.ttf') format('truetype');
   }
 
 
@@ -83,6 +83,7 @@ header {
     cursor: pointer;
     border: none;
     transition: 0.5s;
+    font-size: 16px;
 }
 
 .menu-button .light-button {
@@ -547,16 +548,21 @@ header {
 }
 
 .sponsors{
- margin: 10px 0px 80px 35px;
+ margin: 10px 0px 80px 60px;
+ display: flex;
+ gap: 65px;
+ align-items: center;
 }
 
-.sponsors img {
+.sponsors svg {
   height: 50px;
-  padding: 0 70px;
+  /* padding: 0 70px; */
 }
 
-.sponsors img + img {
+.sponsors svg + svg {
   border-left: 1px solid #ccc;
+  padding-left: 60px;
+  width: 330px;
 }
 
 .testimonies div {
@@ -686,7 +692,7 @@ header {
   border-bottom: 1px solid #ccc;
 }
 
-.footer-section svg {
+.footer-section .logo svg {
   height: 28px;
   width: 130px;
   margin-bottom: 28px;
@@ -736,6 +742,8 @@ header {
   display: flex;
   gap: 40px;
 }
+
+.sm-logo .svg {}
 
 .sm-logo {
   display: flex;
@@ -871,7 +879,7 @@ header {
   }
 
   .add-on-section h1 + h1, .testimony-section h1 + h1 {
-    margin: 0px 0px 5px 0px;
+    /* margin: 0px 0px 5px 0px; */
   }
 
   .add-on-card-layer {
@@ -976,10 +984,17 @@ header {
     font-size: 30px;
   }
 
-  .sponsors img {
+  .sponsors{
+    margin: 10px 0px 80px 65px;
+    gap: 20px;
     height: 50px;
-    padding: 0 20px;
-  }
+   }
+   
+   .sponsors svg + svg {
+     border-left: 1px solid #ccc;
+     padding-left: 0px;
+     width: 290px;
+   }
   
   .call-to-action-section {
     display: flex;
@@ -1040,7 +1055,7 @@ header {
   }
 
   .hero-section h1 {
-    padding: 0px 20px;
+    padding: 20px 20px;
     text-align: center;
   }
   
@@ -1054,13 +1069,20 @@ header {
     display: none;
   }
 
-  .sponsors img {
-    height: 30px;
-    padding: 0 20px;
-}
+  .sponsors svg {
+      height: 30px;
+      width: 150px;
+    }
+
+    .sponsors svg + svg {
+      border-left: 1px solid #ccc;
+      padding-left: 0px;
+      width: 180px;
+    }
 
   .sponsors {
-    margin: 10px 0px 40px 0px;
+    margin: 10px 0px 60px 0px;
+    gap: 10px;
   }
 
   .call-to-action-section .top .left .leaf {
