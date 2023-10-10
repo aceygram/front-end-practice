@@ -21,7 +21,9 @@
   }
 
   h1, h2, h3, h4 {
-    letter-spacing: 50%;
+    font-family: 'Gellix';
+    font-weight: bold;
+    font-style: normal;
   }
   
 * {
