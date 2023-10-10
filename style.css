@@ -7,7 +7,7 @@
 
   @font-face {
     font-family: 'gellix';
-    src: url('fonts/Gellix-Bold.ttf') format('truetype');
+    src: url('fonts/Gellix-Black.ttf') format('truetype');
     font-weight: bold; /* or bold */
     font-style: normal; /* or italic */
   }
