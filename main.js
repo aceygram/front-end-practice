@@ -6,6 +6,27 @@ hamurger.addEventListener('click', () => {
   })
 });
 
+const slideUpElement = document.getElementById('slide-up-element');
+const header = document.getElementById('header');
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        slideUpElement.classList.add('slide-up');
+        slideUpElement.classList.remove('slide-down');
+        header.classList.add('box-shadow');
+        header.classList.remove('no-box-shadow');
+    } else {
+        slideUpElement.classList.remove('slide-up');
+        slideUpElement.classList.add('slide-down');
+        header.classList.remove('box-shadow');
+        header.classList.add('no-box-shadow');
+    }
+};
+
+slideUpElement.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 
 document.getElementById('toggle').addEventListener('change', () => {
   // Your code here for toggle change event
@@ -38,8 +59,3 @@ accordionHeaders.forEach(header => {
     }
   });
 });
-// =
-// N
-// n
-// B 
-// b 
