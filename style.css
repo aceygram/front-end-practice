@@ -1027,7 +1027,7 @@ header {
 
   .show-block-2 {
     display: block;
-    animation: slideDownMenu 0.7s ease-in-out forwards;
+    animation: slideDownMenu 1s ease-in-out forwards;
   }
 
   .show-flex {
@@ -1136,6 +1136,7 @@ header {
 
   .hero-section h1 {
     padding: 0px 20px;
+    margin: 20px 0px;
     text-align: center;
   }
   
