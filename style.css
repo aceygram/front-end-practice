@@ -11,15 +11,87 @@ body {
 }
 
 header {
-    margin: 16px 40px 100px 40px;
+    position: fixed;
+    padding: 16px 40px 0px 40px;
     letter-spacing: 0.25;
     font-size: 16px;
+    background-color: white;
+    top: -20px;
+    right: 0;
+    left: 0;
+    z-index: 1001;
+    margin-top: 20px;
+}
+
+@keyframes slideUpDisappear {
+  0% {
+    height: 20px;
+    padding: 0;
+    opacity: 1;
+    box-shadow: none;
+  }
+  100% {
+    height: 0px;
+    padding: 0;
+    opacity: 0;
+    margin: 0;
+  }
+}
+
+@keyframes slideDownAppear {
+  0% {
+    height: 0px;
+    padding: 0;
+    opacity: 0;
+    margin: 0;
+  }
+  100% {
+    height: 20px;
+    padding: 0;
+    opacity: 1;
+    box-shadow: none;
+  }
+}
+
+@keyframes boxShadow {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 20px 7px rgba(0,0,0,.1);
+  }
+}
+
+@keyframes noBoxShadow {
+  0% {
+    box-shadow: 0 0 20px 7px rgba(0,0,0,.1);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+.slide-up {
+  animation: slideUpDisappear 0.5s ease-in-out forwards;
+}
+
+.slide-down {
+  animation: slideDownAppear 0.5s ease-in-out forwards;
+}
+
+.box-shadow {
+  animation: boxShadow 1s ease-in-out forwards;
+}
+
+.no-box-shadow {
+  animation: noBoxShadow 0.5s ease-in-out forwards;
 }
 
 .top-header {
     display: flex;
     border-bottom: 1px solid rgba(1, 61, 11, 0.11);
     padding-bottom: 7px;
+    margin-bottom: -1px;
     color: rgba(1, 61, 11, 0.651);
     position: relative;
 }
@@ -45,7 +117,6 @@ header {
 }
 
 .menu-button {
-    width: 100%;
     display: flex;
     justify-content: end;
     flex: 1;
@@ -113,6 +184,7 @@ header {
     flex-direction: column;
     align-items: center;
     color: #003c2f;
+    margin-top: 200px;
 }
 
 .switch {
@@ -731,6 +803,10 @@ header {
   gap: 15px;
 }
 
+.show-flex {
+  display: flex;
+}
+
 @media only screen and (max-width: 1200px) {
   .faq-section {
     overflow: hidden;
@@ -747,12 +823,6 @@ header {
 }
 
 @media only screen and (max-width: 991px) {
-  header {
-    margin: 16px 40px 35px 40px;
-    letter-spacing: 0.25;
-    font-size: 16px;
-  }
-
   @keyframes slideDownMenu {
     0% {
       max-height: 0;
@@ -784,9 +854,9 @@ header {
     overflow: hidden;
     position: absolute;
     background-color: white;
-    left: 0;
-    top: 73px;
-    right: 0;
+    left: -40px;
+    top: 60px;
+    right: -40px;
     margin: 4px 0 0 0;
   }
   
@@ -794,6 +864,7 @@ header {
     border-bottom: 1px solid #ccc;
     opacity: 1;
     padding: 31px 0;
+    margin: 0 40px;
     font-weight: bold;
   }
 
@@ -804,16 +875,17 @@ header {
   .menu-button{
     position: absolute;
     background-color: rgb(255, 255, 255);
-    top: 450px;
-    right: 0;
-    left: 0;
+    left: -40px;
+    top: 390px;
+    right: -40px;
     flex-direction: column;
-    height: 180px;
+    height: 100vh;
+    margin: 0 40px;
   }
 
   .menu-button button {
     width: 100%;
-    margin: 20px 0;
+    margin: 10px 0;
     padding: 12px 50px 14px;
     border: none;
   }
@@ -821,7 +893,6 @@ header {
   .menu-button button:nth-child(1) {
     border: 2px solid #003c2f;
   }
-
 
   .menu-together {
     display: none;
@@ -833,14 +904,13 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: none;
-    padding-bottom: 7px;
+    padding-bottom: 20px;
     color: #003c2f;
   }
 
   .bottom-header {
     display: none;
   }
-
 
   .hamurger-layer{
     background-color: #003c2f;
@@ -854,6 +924,15 @@ header {
     display: block;
     width: 30px;
     fill: white;
+  }
+
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #003c2f;
+    margin-top: 120px;
   }
 
   .card {
@@ -878,10 +957,6 @@ header {
 
   .top-card {
     width: 97%;
-  }
-
-  .add-on-section h1 + h1, .testimony-section h1 + h1 {
-    /* margin: 0px 0px 5px 0px; */
   }
 
   .add-on-card-layer {
@@ -972,11 +1047,6 @@ header {
 }
 
 @media screen and (max-width: 767px){
-  header {
-    margin: 16px 20px 35px 20px;
-    letter-spacing: 0.25;
-    font-size: 16px;
-  }
 
   .top-card h1 {
     margin: 9px 0;
@@ -1053,12 +1123,16 @@ header {
 }
 
 @media screen and (max-width: 600px){
+  header {
+    padding: 16px 20px 0px 20px;
+  }
+
   .card-layer {
     max-width: 380px;
   }
 
   .hero-section h1 {
-    padding: 20px 20px;
+    padding: 0px 20px;
     text-align: center;
   }
   
@@ -1107,7 +1181,7 @@ header {
 
 @media screen and (max-width: 420px){
   .card-layer {
-    max-width: 320px;
+    max-width: 340px;
   }
 
   .call-to-action-section .top .left .leaf {
