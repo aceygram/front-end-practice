@@ -831,7 +831,7 @@ header {
     }
     100% {
       max-height: 500px; 
-      padding: 31px 0;
+      padding: 20px 40px;
       opacity: 1;
     }
   }
@@ -839,7 +839,7 @@ header {
   @keyframes slideUpMenu {
     0% {
       max-height: 500px;
-      padding: 31px 0;
+      padding: 20px 40px;
       opacity: 1;
     }
     100% {
@@ -862,9 +862,7 @@ header {
   
   .menu li {
     border-bottom: 1px solid #ccc;
-    opacity: 1;
     padding: 31px 0;
-    margin: 0 40px;
     font-weight: bold;
   }
 
@@ -880,7 +878,7 @@ header {
     right: -40px;
     flex-direction: column;
     height: 100vh;
-    margin: 0 40px;
+    /* margin: 0 40px; */
   }
 
   .menu-button button {
@@ -1025,6 +1023,11 @@ header {
   .show-block {
     display: block;
     animation: slideDownMenu 0.5s ease-in-out forwards;
+  }
+
+  .show-block-2 {
+    display: block;
+    animation: slideDownMenu 0.7s ease-in-out forwards;
   }
 
   .show-flex {

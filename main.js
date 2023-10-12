@@ -1,9 +1,11 @@
 const hamurger = document.querySelector('.hamurger-layer');
 hamurger.addEventListener('click', () => {
-  const menu = document.querySelectorAll('.menu-together');
-  menu.forEach((m) => {
-    m.classList.toggle('show-block');
-  })
+  const menu = document.querySelector('.menu');
+  const menuButton = document.querySelector('.menu-button');
+
+  menu.classList.toggle('show-block');
+  menuButton.classList.toggle('show-block-2');
+
 });
 
 const slideUpElement = document.getElementById('slide-up-element');
