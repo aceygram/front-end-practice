@@ -855,6 +855,10 @@ header {
       display: block;
     }
 
+    90% {
+      display: block;
+    }
+
     100% {
       left: -40px;
       top: 20px;
