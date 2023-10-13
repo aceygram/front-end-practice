@@ -837,14 +837,12 @@ header {
       top: 20px;
       right: -40px;
       opacity: 0;
-      display:  none;
     }
     100% {
       left: -40px;
       top: 60px;
       right: -40px;
       opacity: 1;
-      display:  block;
     }
   }
 
@@ -854,11 +852,6 @@ header {
       top: 60px;
       right: -40px;
       opacity: 1;
-      display:  block;
-    }
-
-    90% {
-      display:  block;
     }
 
     100% {
@@ -866,7 +859,6 @@ header {
       top: 20px;
       right: -40px;
       opacity: 0;
-      display:  none;
     }
   }
   
@@ -1042,6 +1034,7 @@ header {
   }
 
   .hide-block {
+    display: none;
     animation: slideUpMenu 0.5s ease-in-out forwards;
   }
 
