@@ -12,7 +12,7 @@ body {
 
 header {
     position: fixed;
-    padding: 16px 40px 0px 40px;
+    padding: 12px 40px 0px 40px;
     letter-spacing: 0.25;
     font-size: 16px;
     background-color: white;
@@ -89,11 +89,19 @@ header {
 
 .top-header {
     display: flex;
+    justify-content: center;
+    align-items: center;
     border-bottom: 1px solid rgba(1, 61, 11, 0.11);
-    padding-bottom: 7px;
+    padding-bottom: 10px;
     margin-bottom: -1px;
     color: rgba(1, 61, 11, 0.651);
     position: relative;
+}
+
+.menu-together {
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
 
 .menu {
@@ -132,7 +140,7 @@ header {
 .menu-button button, 
 .card  button,
 .call-to-action-section button {
-    padding: 10px 20px 15px;
+    padding: 10px 20px 12px;
     border-radius: 50px;
     cursor: pointer;
     border: none;
@@ -825,39 +833,41 @@ header {
 @media only screen and (max-width: 991px) {
   @keyframes slideDownMenu {
     0% {
-      max-height: 0;
-      padding: 0;
+      left: -40px;
+      top: 20px;
+      right: -40px;
       opacity: 0;
     }
     100% {
-      max-height: 500px; 
-      padding: 20px 40px;
+      left: -40px;
+      top: 60px;
+      right: -40px;
       opacity: 1;
     }
   }
 
   @keyframes slideUpMenu {
     0% {
-      max-height: 500px;
-      padding: 20px 40px;
+      left: -40px;
+      top: 60px;
+      right: -40px;
       opacity: 1;
     }
     100% {
-      max-height: 0;
-      padding: 0;
+      left: -40px;
+      top: 20px;
+      right: -40px;
       opacity: 0;
     }
   }
   
   .menu {
-    max-height: 0;
     overflow: hidden;
-    position: absolute;
+    flex-direction: column;
     background-color: white;
-    left: -40px;
-    top: 60px;
-    right: -40px;
-    margin: 4px 0 0 0;
+    margin: 0 0 0 0;
+    padding: 20px 40px;
+    gap: 0;
   }
   
   .menu li {
@@ -871,14 +881,10 @@ header {
   }
 
   .menu-button{
-    position: absolute;
     background-color: rgb(255, 255, 255);
-    left: -40px;
-    top: 390px;
-    right: -40px;
     flex-direction: column;
-    height: 100vh;
-    /* margin: 0 40px; */
+    margin: -50px 0px;
+    padding: 10px 40px 50px;
   }
 
   .menu-button button {
@@ -894,6 +900,7 @@ header {
 
   .menu-together {
     display: none;
+    position: absolute;
     z-index: 1000;
   }
 
@@ -902,7 +909,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: none;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     color: #003c2f;
   }
 
@@ -1025,9 +1032,9 @@ header {
     animation: slideDownMenu 0.5s ease-in-out forwards;
   }
 
-  .show-block-2 {
+  .hide-block {
     display: block;
-    animation: slideDownMenu 2s ease-in-out forwards;
+    animation: slideUpMenu 1s ease-in-out forwards;
   }
 
   .show-flex {

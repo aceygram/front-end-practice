@@ -1,11 +1,13 @@
 const hamurger = document.querySelector('.hamurger-layer');
 hamurger.addEventListener('click', () => {
-  const menu = document.querySelector('.menu');
-  const menuButton = document.querySelector('.menu-button');
-
-  menu.classList.toggle('show-block');
-  menuButton.classList.toggle('show-block-2');
-
+  const menu = document.querySelector('.menu-together');
+  if (menu.classList.contains('show-block')) {
+    menu.classList.remove('show-block');
+    menu.classList.add('hide-block');
+  } else {
+    menu.classList.add('show-block');
+    menu.classList.remove('hide-block');
+  }
 });
 
 const slideUpElement = document.getElementById('slide-up-element');
