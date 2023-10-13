@@ -837,12 +837,14 @@ header {
       top: 20px;
       right: -40px;
       opacity: 0;
+      display:  none;
     }
     100% {
       left: -40px;
       top: 60px;
       right: -40px;
       opacity: 1;
+      display: block;
     }
   }
 
@@ -852,6 +854,7 @@ header {
       top: 60px;
       right: -40px;
       opacity: 1;
+      display: block;
     }
 
     100% {
@@ -859,6 +862,8 @@ header {
       top: 20px;
       right: -40px;
       opacity: 0;
+      display: none;
+
     }
   }
   
@@ -1029,12 +1034,10 @@ header {
   }
 
   .show-block {
-    display: block;
     animation: slideDownMenu 0.5s ease-in-out forwards;
   }
 
   .hide-block {
-    display: none;
     animation: slideUpMenu 0.5s ease-in-out forwards;
   }
 
