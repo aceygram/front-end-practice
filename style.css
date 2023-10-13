@@ -839,11 +839,6 @@ header {
       opacity: 0;
       display:  none;
     }
-
-    90% {
-      display:  block;
-    }
-    
     100% {
       left: -40px;
       top: 60px;
