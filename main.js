@@ -4,9 +4,14 @@ hamurger.addEventListener('click', () => {
   if (menu.classList.contains('show-block')) {
     menu.classList.remove('show-block');
     menu.classList.add('hide-block');
+    setTimeout(() => { 
+      menu.style.display = 'none'; 
+    }, 1000);
+    
   } else {
     menu.classList.add('show-block');
     menu.classList.remove('hide-block');
+    menu.style.display = 'block';
   }
 });
 
